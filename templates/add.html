@@ -1,0 +1,37 @@
+<!doctype html>
+
+<head>
+    <title>Image Repository</title>
+</head>
+
+<h2>Add New Inventory</h2>
+{% if filename %}
+<div>
+    <img src="{{ url_for('display_image', filename=filename) }}">
+</div>
+{% endif %}
+<form method="post" enctype="multipart/form-data">
+    <dl>
+        <p>
+            <dt>Enter product name:</dt>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <dt>Enter product price:</dt>
+            <input type="text" name="price">
+        </p>
+        <p>
+            <dt>Enter available stock:</dt>
+            <input type="text" name="stock">
+        </p>
+        <p>
+            <dt>Upload product picture file:</dt>
+            <input type="file" name="file" autocomplete="off" required>
+        </p>
+
+    </dl>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+    <a href="/devtool">Go To Developer Tool</a> <br>
+</form>

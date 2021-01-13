@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Image Repository</title>
+</head>
+
+<h2>Image Repository</h2>
+
+<body>
+    <a href="/">Go To Marketplace</a> <br>
+    <a href="/add">Add Inventory</a> <br>
+    <a href="/reset">Reset Inventory</a> <br>
+
+    <br>
+    <p>Total Inventory Sold: ${{earnings}}</p> <br>
+
+    <table border=1>
+        <thead>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Stock</td>
+            <td>Image</td>
+            <td></td>
+        </thead>
+
+        {% for item in inventory %}
+        <tr>
+            <td>{{item["name"]}}</td>
+            <td>{{item["price"]}}</td>
+            <td>{{item["stock"]}}</td>
+            <td><img src='{{item["src"]}}' /></td>
+            <td><a href='/restock/{{item["id"]}}'>RESTOCK</button></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
