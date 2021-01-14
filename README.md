@@ -1,6 +1,6 @@
 # image-repository
 
-This is **Bridget Hart**'s submission to the **Shopify 2021 Winter Developer Challenge**. :-)
+This is **Bridget Hart**'s submission to the **Shopify 2021 Summer Developer Challenge**. :-)
 
 Here is a Marketplace where users can view and buy products!
 The administrator can add and restock inventory using the Developer Tool.
